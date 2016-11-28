@@ -162,6 +162,8 @@ void ConfigurationDialog::UpdateStates()
 
 int ConfigurationDialog::CurrentSelection()
 {
+    DEBUGST("Current alarm: ");
+    DEBUGEND(m_lAlarms->GetNextItem(-1, wxLIST_NEXT_ALL, wxLIST_STATE_SELECTED));
     return m_lAlarms->GetNextItem(-1, wxLIST_NEXT_ALL, wxLIST_STATE_SELECTED);
 }
 
